@@ -170,7 +170,7 @@ ii. Create a vector containing each `Treatment` repeated for each participant ID
 ## Part d
 Create a vector containing the `character` "MATH" and the `numeric` 240. What is the resulting class? Explain why in a sentence.
 
-# Solutions
+# Solution:
 ## Install package
 ```{r}
 #| size: "scriptsize"
@@ -201,11 +201,54 @@ vignette("esquisse")
 ```
 
 ## Citation
+The `esquisse` package has drag-and-drop interface for mapping variables and creating ggplot2 figures without writing a lot of code [@esquisse].
 
-## Observation
+## Observation and Conclusion
 After using `esquisser()` with the `palmerpenguins` dataset, I plotted `body_mass_g` on the x-axis and filled by `species`. Based on the plot, Gentoo penguins are larger and heavier than the other two species. Adelie and Chinstrap penguins are more similar in body mass, though Chinstrap penguins are marginally heavier. 
 
-## Conclusion
 Body mass is strong characteristic that distinguishes Gentoo penguins from Adelie and Chinstrap penguins, while it's less effective at separating Adelie and Chinstrap penguins from each other.
 
-## Fibonacci numbers
+## Fibonacci
+```{r}
+#| size: "scriptsize"
+(fib <- c(0, 1, 1, 2, 3, 5, 8, 13, 21, 34))
+```
+
+Manually created a vector for 1st 10 fibonacci numbers. Both `seq()` and `rep()` cannot be used here since the numbers are neither sequential nor repeating.
+
+## Triangular numbers
+1st 10 triangular numbers.
+```{r}
+#| size: "scriptsize"
+n<-1:10
+(nums<-n * (n+1)/2)
+```
+
+Used the colon operator to find the sequence of numbers from 1 to 10, both inclusive, and used the formula
+ $$F_n = \frac{n(n+1)}{2}.$$ 
+ 
+ to find the 1st 10 triangular numbers
+
+## Measures experiment
+```{r}
+#| size: "scriptsize"
+(ID<-rep(1:10,times=3))
+```
+
+```{r}
+#| size: "scriptsize"
+(Treatment <- factor(
+  rep(c("Control", "Treatment A", "Treatment B"), times = 10)
+))
+```
+
+I used `rep()` for both ID and Treatment to repeat the given values the set number of times and used `factor()` for the treatment variables to show that they are categorical.
+
+## Resulting class
+```{r}
+#| size: "scriptsize"
+v<-c("MATH",240)
+class(v)
+```
+
+The resulting class is `character` because `R` convertes the values into the highest level type and since "MATH" is a `character` and is of a higher level than `numeric` 240, it results in class `character`.

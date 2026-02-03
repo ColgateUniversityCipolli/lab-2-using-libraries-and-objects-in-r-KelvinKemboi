@@ -272,8 +272,8 @@ the command instead of actually citing. --></p>
 <p>Create a vector containing the <code>character</code> “MATH” and the <code>numeric</code> 240. What is the resulting class? Explain why in a sentence.</p>
 </section>
 </section>
-<section id="solutions" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Solutions</h1>
+<section id="solution" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Solution:</h1>
 <section id="install-package" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="install-package"><span class="header-section-number">3.1</span> Install package</h2>
 <p></p>
@@ -321,24 +321,105 @@ the command instead of actually citing. --></p>
 </section>
 <section id="citation" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="citation"><span class="header-section-number">3.5</span> Citation</h2>
+<p>The <code>esquisse</code> package has drag-and-drop interface for mapping variables and creating ggplot2 figures without writing a lot of code <span class="citation" data-cites="esquisse">(<a href="#ref-esquisse" role="doc-biblioref">Meyer and Perrier 2025</a>)</span>.</p>
 </section>
-<section id="observation" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="observation"><span class="header-section-number">3.6</span> Observation</h2>
+<section id="observation-and-conclusion" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="observation-and-conclusion"><span class="header-section-number">3.6</span> Observation and Conclusion</h2>
 <p>After using <code>esquisser()</code> with the <code>palmerpenguins</code> dataset, I plotted <code>body_mass_g</code> on the x-axis and filled by <code>species</code>. Based on the plot, Gentoo penguins are larger and heavier than the other two species. Adelie and Chinstrap penguins are more similar in body mass, though Chinstrap penguins are marginally heavier.</p>
-</section>
-<section id="conclusion" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">3.7</span> Conclusion</h2>
 <p>Body mass is strong characteristic that distinguishes Gentoo penguins from Adelie and Chinstrap penguins, while it’s less effective at separating Adelie and Chinstrap penguins from each other.</p>
 </section>
-<section id="fibonacci-numbers" class="level2 unnumbered" data-number="3.8">
-
+<section id="fibonacci" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="fibonacci"><span class="header-section-number">3.7</span> Fibonacci</h2>
+<p></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>(fib <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">13</span>, <span class="dv">21</span>, <span class="dv">34</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  0  1  1  2  3  5  8 13 21 34</code></pre>
+</div>
+</div>
+<p></p>
+<p>Manually created a vector for 1st 10 fibonacci numbers. Both <code>seq()</code> and <code>rep()</code> cannot be used here since the numbers are neither sequential nor repeating.</p>
+</section>
+<section id="triangular-numbers" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="triangular-numbers"><span class="header-section-number">3.8</span> Triangular numbers</h2>
+<p>1st 10 triangular numbers.</p>
+<p></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>n<span class="ot">&lt;-</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a>(nums<span class="ot">&lt;-</span>n <span class="sc">*</span> (n<span class="sc">+</span><span class="dv">1</span>)<span class="sc">/</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  3  6 10 15 21 28 36 45 55</code></pre>
+</div>
+</div>
+<p></p>
+<p>Used the colon operator to find the sequence of numbers from 1 to 10, both inclusive, and used the formula <span class="math display">\[F_n = \frac{n(n+1)}{2}.\]</span></p>
+<p>to find the 1st 10 triangular numbers</p>
+</section>
+<section id="measures-experiment" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="measures-experiment"><span class="header-section-number">3.9</span> Measures experiment</h2>
+<p></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>(ID<span class="ot">&lt;-</span><span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,<span class="at">times=</span><span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10  1  2  3  4  5  6  7  8  9 10  1  2  3  4  5
+[26]  6  7  8  9 10</code></pre>
+</div>
+</div>
+<p></p>
+<p></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>(Treatment <span class="ot">&lt;-</span> <span class="fu">factor</span>(</span>
+<span id="cb28-2"><a href="#cb28-2"></a>  <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Control"</span>, <span class="st">"Treatment A"</span>, <span class="st">"Treatment B"</span>), <span class="at">times =</span> <span class="dv">10</span>)</span>
+<span id="cb28-3"><a href="#cb28-3"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] Control     Treatment A Treatment B Control     Treatment A Treatment B
+ [7] Control     Treatment A Treatment B Control     Treatment A Treatment B
+[13] Control     Treatment A Treatment B Control     Treatment A Treatment B
+[19] Control     Treatment A Treatment B Control     Treatment A Treatment B
+[25] Control     Treatment A Treatment B Control     Treatment A Treatment B
+Levels: Control Treatment A Treatment B</code></pre>
+</div>
+</div>
+<p></p>
+<p>I used <code>rep()</code> for both ID and Treatment to repeat the given values the set number of times and used <code>factor()</code> for the treatment variables to show that they are categorical.</p>
+</section>
+<section id="resulting-class" class="level2" data-number="3.10">
+<h2 data-number="3.10" class="anchored" data-anchor-id="resulting-class"><span class="header-section-number">3.10</span> Resulting class</h2>
+<p></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>v<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"MATH"</span>,<span class="dv">240</span>)</span>
+<span id="cb30-2"><a href="#cb30-2"></a><span class="fu">class</span>(v)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "character"</code></pre>
+</div>
+</div>
+<p></p>
+<p>The resulting class is <code>character</code> because <code>R</code> convertes the values into the highest level type and since “MATH” is a <code>character</code> and is of a higher level than <code>numeric</code> 240, it results in class <code>character</code>.</p>
 
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">3.8 Fibonacci numbers</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-primes" class="csl-entry" role="listitem">
 Keyes, Os, and Paul Egeler. 2025. <em>Primes: Fast Functions for Prime Numbers</em>. <a href="https://doi.org/10.32614/CRAN.package.primes">https://doi.org/10.32614/CRAN.package.primes</a>.
+</div>
+<div id="ref-esquisse" class="csl-entry" role="listitem">
+Meyer, Fanny, and Victor Perrier. 2025. <em>Esquisse: Explore and Visualize Your Data Interactively</em>. <a href="https://doi.org/10.32614/CRAN.package.esquisse">https://doi.org/10.32614/CRAN.package.esquisse</a>.
 </div>
 <div id="ref-R" class="csl-entry" role="listitem">
 R Core Team. 2025. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
